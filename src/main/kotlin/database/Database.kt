@@ -46,11 +46,6 @@ class Database(private val url: String) {
                 columnType += " AUTOINCREMENT"
             }
 
-            /*val columnType = if (it.isAnnotationPresent(PrimaryKey::class.java)) {
-                "INTEGER PRIMARY KEY AUTOINCREMENT"
-            } else {
-                getSQLType(it.type)
-            }*/
             "$columnName $columnType"
         }
 
